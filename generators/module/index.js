@@ -12,7 +12,7 @@ const modelGenerator = class extends Generator {
     return this.prompt([{
       name: 'models',
       type: 'input',
-      message: 'Models: (singular and comma separated)',
+      message: 'Modules: (singular and comma separated)',
       filter: answer => answer.split(','),
       default: 'newModel'
     }]).then((answers) => {

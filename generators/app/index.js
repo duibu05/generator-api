@@ -42,7 +42,7 @@ const serverGenerator = class extends Generator {
     }, {
       name: 'models',
       type: 'input',
-      message: 'Models: (singular and comma separated)',
+      message: 'Modules: (singular and comma separated)',
       filter: answer => answer.split(','),
       default: 'user, pet'
     }, {
