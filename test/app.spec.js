@@ -66,18 +66,18 @@ describe('generator-api', () => {
     describe('models', () => {
       it('generates a folder for each model', () => {
         assert.file([
-          'model/foo',
-          'model/bar',
-          'model/baz-foo'
+          'modules/foo',
+          'modules/bar',
+          'modules/baz-foo'
         ])
       })
 
       describe('controllers', () => {
         it('generates a controller for each model', () => {
           assert.file([
-            'model/foo/controller.js',
-            'model/bar/controller.js',
-            'model/baz-foo/controller.js'
+            'modules/foo/controller.js',
+            'modules/bar/controller.js',
+            'modules/baz-foo/controller.js'
           ])
         })
       })
@@ -85,9 +85,9 @@ describe('generator-api', () => {
       describe('facades', () => {
         it('generates a facade for each model', () => {
           assert.file([
-            'model/foo/facade.js',
-            'model/bar/facade.js',
-            'model/baz-foo/facade.js'
+            'modules/foo/facade.js',
+            'modules/bar/facade.js',
+            'modules/baz-foo/facade.js'
           ])
         })
       })
@@ -95,9 +95,9 @@ describe('generator-api', () => {
       describe('routes', () => {
         it('generates a router for each model', () => {
           assert.file([
-            'model/foo/router.js',
-            'model/bar/router.js',
-            'model/baz-foo/router.js'
+            'modules/foo/router.js',
+            'modules/bar/router.js',
+            'modules/baz-foo/router.js'
           ])
         })
       })
@@ -105,9 +105,9 @@ describe('generator-api', () => {
       describe('schemas', () => {
         it('generates a schema for each model', () => {
           assert.file([
-            'model/foo/schema.js',
-            'model/bar/schema.js',
-            'model/baz-foo/schema.js'
+            'modules/foo/schema.js',
+            'modules/bar/schema.js',
+            'modules/baz-foo/schema.js'
           ])
         })
       })

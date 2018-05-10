@@ -22,10 +22,10 @@ const modelGenerator = class extends Generator {
 
   writing () {
     this.models.forEach((model) => {
-      const controllerPath = `model/${model.slugName}/controller.js`
-      const facadePath = `model/${model.slugName}/facade.js`
-      const routerPath = `model/${model.slugName}/router.js`
-      const schemaPath = `model/${model.slugName}/schema.js`
+      const controllerPath = `modules/${model.slugName}/controller.js`
+      const facadePath = `modules/${model.slugName}/facade.js`
+      const routerPath = `modules/${model.slugName}/router.js`
+      const schemaPath = `modules/${model.slugName}/schema.js`
 
       if (
         this.fs.exists(this.destinationPath(controllerPath)) ||
@@ -50,28 +50,28 @@ const modelGenerator = class extends Generator {
         this.fs.write(this.destinationPath('routes.js'), routes)
       }
       this.fs.copyTpl(
-        this.templatePath('./../../app/templates/model/controller.js'),
-        this.destinationPath(`model/${model.slugName}/controller.js`), {
+        this.templatePath('./../../app/templates/modules/controller.js'),
+        this.destinationPath(`modules/${model.slugName}/controller.js`), {
           model
         }
       )
 
       this.fs.copyTpl(
-        this.templatePath('./../../app/templates/model/facade.js'),
+        this.templatePath('./../../app/templates/modules/facade.js'),
         this.destinationPath(facadePath), {
           model
         }
       )
 
       this.fs.copyTpl(
-        this.templatePath('./../../app/templates/model/router.js'),
+        this.templatePath('./../../app/templates/modules/router.js'),
         this.destinationPath(routerPath), {
           model
         }
       )
 
       this.fs.copyTpl(
-        this.templatePath('./../../app/templates/model/schema.js'),
+        this.templatePath('./../../app/templates/modules/schema.js'),
         this.destinationPath(schemaPath), {
           model
         }

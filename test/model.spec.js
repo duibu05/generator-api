@@ -4,9 +4,9 @@ const helpers = require('yeoman-test')
 const assert = require('yeoman-assert')
 const path = require('path')
 
-describe('generator-api:model', () => {
+describe('generator-api:module', () => {
   describe('Run yeoman model sub generator', () => {
-    before(() => helpers.run(path.join(__dirname, '../generators/model'))
+    before(() => helpers.run(path.join(__dirname, '../generators/module'))
       .withPrompts({
         models: ['newmodel1', 'newmodel2']
       })
@@ -15,16 +15,16 @@ describe('generator-api:model', () => {
     describe('models', () => {
       it('generates a folder for each model', () => {
         assert.file([
-          'model/newmodel1',
-          'model/newmodel2'
+          'modules/newmodel1',
+          'modules/newmodel2'
         ])
       })
 
       describe('controllers', () => {
         it('generates a controller for each model', () => {
           assert.file([
-            'model/newmodel1/controller.js',
-            'model/newmodel2/controller.js'
+            'modules/newmodel1/controller.js',
+            'modules/newmodel2/controller.js'
           ])
         })
       })
@@ -32,8 +32,8 @@ describe('generator-api:model', () => {
       describe('facades', () => {
         it('generates a facade for each model', () => {
           assert.file([
-            'model/newmodel1/facade.js',
-            'model/newmodel2/facade.js'
+            'modules/newmodel1/facade.js',
+            'modules/newmodel2/facade.js'
           ])
         })
       })
@@ -41,8 +41,8 @@ describe('generator-api:model', () => {
       describe('routes', () => {
         it('generates a router for each model', () => {
           assert.file([
-            'model/newmodel1/router.js',
-            'model/newmodel2/router.js'
+            'modules/newmodel1/router.js',
+            'modules/newmodel2/router.js'
           ])
         })
       })
@@ -50,8 +50,8 @@ describe('generator-api:model', () => {
       describe('schemas', () => {
         it('generates a schema for each model', () => {
           assert.file([
-            'model/newmodel1/schema.js',
-            'model/newmodel2/schema.js'
+            'modules/newmodel1/schema.js',
+            'modules/newmodel2/schema.js'
           ])
         })
       })

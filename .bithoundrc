@@ -1,8 +1,8 @@
 {
   "ignore": [
     "example/lib/controller.js",
-    "generators/app/templates/model/controller.js",
-    "generators/app/templates/model/facade.js",
+    "generators/app/templates/modules/controller.js",
+    "generators/app/templates/modules/facade.js",
     "example/lib/facade.js"
   ],
   "critics": {

@@ -67,7 +67,7 @@ Assuming we use `user` and `pet` models the generated project will look like thi
 └───lib/
 |   ├───controller.js
 |   ├───facade.js
-└───model/
+└───modules/
     ├───user/
     │   └───controller.js
     |   └───facade.js
@@ -98,7 +98,7 @@ Once you have the generated project, if you want to add a new model you can simp
 Example:
 
 * Run `yo api:model`, write foo (What ever model name you want)
-* Go to `routes.js` and import the new generated model route `const foo = require('./model/foo/router')`
+* Go to `routes.js` and import the new generated model route `const foo = require('./modules/foo/router')`
 * Use the imported route `router.use('/foo', foo)`
 
 ## Contributing
